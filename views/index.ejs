@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Commit History</title>
+</head>
+<body>
+    <h1>GitHub Commit History</h1>
+    <form action="/commits" method="GET">
+        <label for="username">GitHub Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+        <label for="reponame">Repository Name:</label>
+        <input type="text" id="reponame" name="reponame" required>
+        <br><br>
+        <button type="submit">Fetch Commits</button>
+    </form>
+</body>
+</html>
