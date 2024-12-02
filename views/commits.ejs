@@ -47,19 +47,17 @@
         </thead>
         <tbody>
             <% commits.forEach(commit => { %>
-                <tr style="background-color:<%= /\d$/.test(commit.hash) ? '#FFFF00' : 'transparent' %>">
+                <tr 
+                    <% if (/\d$/.test(commit.hash)) { %>
+                        style="background-color: #FFFF00;"
+                    <% } %>
+                >
                     <td><%= commit.author %></td>
                     <td><%= commit.message %></td>
                     <td><%= commit.hash %></td>
                 </tr>
             <% }); %>
         </tbody>
-    
     </table>
 </body>
 </html>
-
-
-
-
-
